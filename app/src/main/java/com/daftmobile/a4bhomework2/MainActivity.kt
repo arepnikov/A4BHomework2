@@ -1,8 +1,9 @@
 package com.daftmobile.a4bhomework2
 
+import android.content.DialogInterface
 import android.os.Bundle
+import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
-import android.view.View
 import android.widget.Button
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -19,8 +20,15 @@ class MainActivity : AppCompatActivity() {
 
     private
 
-    fun buttonOnClickListener( button: Button ) {
-        textView.text = button.text
+    fun buttonOnClickListener( button: Button ) = showMsgInOKAlert(button.text)
+
+    fun showMsgInOKAlert(msg: CharSequence) {
+        val builder = AlertDialog.Builder(this)
+        builder.setMessage(msg)
+        builder.setPositiveButton("OK") { dialogInterface: DialogInterface, i: Int -> }
+        builder.show()
     }
+
+//    fun test( button: Button ): Unit = textView.text = "czesc"
 }
 
