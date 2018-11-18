@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     private
 
-    fun buttonOnClickListener( button: Button ) = showMsgInOKAlert(button.text)
+    fun buttonOnClickListener( button: Button ) = showMsgInOKAlert( getString(R.string.ok_alert_msg, button.text))
 
     fun showMsgInOKAlert(msg: CharSequence) {
         val builder = AlertDialog.Builder(this)
@@ -28,7 +28,5 @@ class MainActivity : AppCompatActivity() {
         builder.setPositiveButton("OK") { dialogInterface: DialogInterface, i: Int -> }
         builder.show()
     }
-
-//    fun test( button: Button ): Unit = textView.text = "czesc"
 }
 
