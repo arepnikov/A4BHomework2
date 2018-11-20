@@ -20,13 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     private
 
-    fun buttonOnClickListener( button: Button ) = showMsgDialog( getString(R.string.ok_alert_msg, button.text))
+    fun buttonOnClickListener( button: Button ) = showMsgDialog(this, getString(R.string.ok_alert_msg, button.text))
 
-    fun showMsgDialog(msg: CharSequence) {
-        val builder = AlertDialog.Builder(this)
-        builder.setMessage(msg)
-        builder.setPositiveButton("OK") { dialogInterface: DialogInterface, i: Int -> }
-        builder.show()
-    }
 }
 
