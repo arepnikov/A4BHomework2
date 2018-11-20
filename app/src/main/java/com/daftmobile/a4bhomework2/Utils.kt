@@ -7,6 +7,6 @@ import android.support.v7.app.AlertDialog
 fun showMsgDialog(context: Context,  msg: CharSequence) {
     val builder = AlertDialog.Builder(context)
     builder.setMessage(msg)
-    builder.setPositiveButton("OK") { dialogInterface: DialogInterface, i: Int -> }
+    builder.setPositiveButton("OK") { _: DialogInterface, _: Int -> }
     builder.show()
 }
